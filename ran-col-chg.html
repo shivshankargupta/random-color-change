@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>random color chang</title>
+    <style>
+      button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>random change to color</h1>
+    <button>change color</button>
+
+    <script>
+      var btn = document.querySelector("button");
+      function random(number) {
+        return Math.floor(Math.random() * number);
+      }
+
+      function bgChange() {
+        var color =
+          "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+        document.body.style.background = color;
+      }
+
+      function colorchange() {
+        var color =
+          "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+        document.body.style.color = color;
+      }
+
+      btn.addEventListener("click", bgChange);
+      btn.addEventListener("click", colorChange);
+    </script>
+  </body>
+</html>
